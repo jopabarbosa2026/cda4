@@ -146,6 +146,11 @@ section { padding: 6rem 1.5rem; position: relative; }
 }
 .hero-content .eyebrow { color: var(--gold-soft); margin-bottom: 2rem; }
 .hero-content .eyebrow::before, .hero-content .eyebrow::after { background: var(--gold-deep); }
+/* o kicker do hero é longo e quebra em duas linhas: sem o traço final, e com o
+   traço inicial alinhado à primeira linha, a quebra fica intencional */
+.hero-content .eyebrow { align-items: flex-start; }
+.hero-content .eyebrow::before { margin-top: 0.58rem; }
+.hero-content .eyebrow::after { display: none; }
 .hero h1 {
   font-size: clamp(2.6rem, 5.2vw, 4.4rem); color: var(--cream);
   margin-bottom: 1.8rem; font-weight: 500; letter-spacing: -0.015em;
@@ -296,8 +301,21 @@ section { padding: 6rem 1.5rem; position: relative; }
 .pur-card .pur-name { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--cream); font-weight: 600; margin-bottom: 0.2rem; }
 .pur-card .pur-tag { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-soft); font-weight: 700; margin-bottom: 1rem; }
 .pur-card p { font-size: 0.92rem; color: var(--parchment); line-height: 1.5; margin: 0; }
-@media (max-width: 860px) { .purusharthas-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 480px) { .purusharthas-grid { grid-template-columns: 1fr; } }
+
+/* variante de 3 colunas — usada pelas faces da Deusa */
+.purusharthas-grid.three { grid-template-columns: repeat(3, 1fr); }
+
+/* variante clara — mesma grade sobre fundo pergaminho */
+.purusharthas-grid.light .pur-card { background: var(--parchment-soft); border-color: var(--parchment-deep); }
+.purusharthas-grid.light .pur-card:hover { background: var(--parchment); border-color: var(--gold); }
+.purusharthas-grid.light .pur-card .pur-sanskrit { color: var(--saffron-deep); }
+.purusharthas-grid.light .pur-card .pur-name { color: var(--maroon); }
+.purusharthas-grid.light .pur-card .pur-tag { color: var(--saffron-deep); }
+.purusharthas-grid.light .pur-card p { color: var(--ink-soft); }
+.purusharthas-grid.light .pur-card p em { color: var(--saffron-deep); font-style: italic; }
+
+@media (max-width: 860px) { .purusharthas-grid, .purusharthas-grid.three { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .purusharthas-grid, .purusharthas-grid.three { grid-template-columns: 1fr; } }
 
 /* === METHOD PILLARS === */
 .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 3rem 0 0; }

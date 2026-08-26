@@ -1,16 +1,18 @@
 # Caminho da Autonomia
 
-Uma jornada estruturada de transformação baseada no Ayurveda, na investigação racional e na sabedoria milenar da tradição hindu.
+Introdução à filosofia e às práticas tântricas não-duais — o Devī Māhātmya, o Āyurveda místico e a investigação racional (tarka) integrados num caminho de reorganização existencial rumo ao svātantrya.
 
 ## 📋 Sobre
 
-Página de vendas do programa educacional online **Caminho da Autonomia**. Apresenta os quatro módulos (Artha, Kāma, Dharma e Mokṣa) e oferece inscrição com acesso imediato às aulas gravadas.
+Página de vendas do curso online **Caminho da Autonomia**. Apresenta os cinco módulos guiados pelas faces da Deusa (Darśana, Yoni, Mahākālī, Mahālakṣmī, Mahāsarasvatī) e oferece inscrição em encontros ao vivo semanais, que ficam gravados, mais um encontro mensal da comunidade.
+
+**Oferta atual:** R$ 997 à vista no PIX ou 12x no cartão · garantia incondicional de 7 dias.
 
 ### Características
 
 - Design elegante e responsivo (Cormorant Garamond + Cardo)
 - Paleta de cores: pergaminho, dourado, vermelho e marrom
-- 8 seções de conteúdo + Hero + FAQ
+- 10 seções de conteúdo + Hero + FAQ
 - 100% HTML/CSS (sem dependências externas)
 - Otimizado para conversão
 
@@ -51,12 +53,22 @@ URL será algo como: `caminho-da-autonomia.vercel.app`
    - Procure por `COLOQUE_SEU_LINK_AQUI`
    - Substitua pela URL do seu checkout (Hotmart, Kiwify, etc.)
 
-2. **Depoimentos** (na seção "Testimonials"):
-   - Substitua `[Depoimento do aluno...]` por depoimentos reais
-   - Atualize `[Nome do aluno]` e `[Perfil · Cidade]`
+2. **Depoimentos** (seção `testimonials`):
+   - Os 4 cartões são placeholders. Substitua por depoimentos **reais**: nome, perfil/cidade
+     e 2 a 4 linhas sobre a virada concreta (uma mudança na rotina, no corpo, no propósito,
+     numa decisão tomada com clareza). O específico convence; "mudou minha vida" não.
+   - Se ainda não houver nenhum depoimento real, **apague a seção inteira** e reinsira depois.
+     Melhor nenhuma prova social do que prova social inventada. Há um comentário no HTML
+     logo acima da seção explicando isso.
 
-3. **FAQ** (última pergunta sobre tempo de acesso):
-   - Substitua o texto entre colchetes pela política de acesso do seu programa
+3. **FAQ — "Por quanto tempo terei acesso?"**:
+   - Substitua o `[INSERIR: ...]` pela política real de acesso às gravações
+     (por X tempo / enquanto durar a turma / vitalício).
+
+4. **Valor da parcela** (opcional):
+   - A página diz apenas "12x no cartão". Quando souber o valor exato da parcela cobrado
+     pelo checkout, troque por "12x de R$ XX,XX" — há um comentário no HTML nos dois lugares
+     (card do hero e bloco de investimento).
 
 ## 🎨 Customização
 
@@ -86,14 +98,15 @@ O design é completamente responsivo e funciona perfeitamente em:
 1. **Hero** - Apresentação + card de oferta
 2. **Depoimentos** - Social proof (2ª seção)
 3. **Para Quem É** - Qualificação (sim/não)
-4. **Diagnóstico** - Problema
-5. **Visão** - Os 4 Puruṣārthas
-6. **Metodologia** - 3 pilares
-7. **Ideia Central** - Diferenciação
-8. **Módulos** - O que está incluído
-9. **Investimento** - Preço + garantia
-10. **FAQ** - Perguntas frequentes
-11. **CTA Final** - Conversão
+4. **Diagnóstico** - Problema (os *malas*, os véus que contraem a Consciência)
+5. **A Deusa** - A visão central: Mahākālī, Mahālakṣmī e Mahāsarasvatī como mapa dos guṇas
+6. **Puruṣārthas** - O telos: Dharma, Artha, Kāma, Mokṣa (nessa ordem — dharma é a base)
+7. **Metodologia** - 3 pilares (filosofia tântrica não-dual, Āyurveda místico, tarka)
+8. **Ideia Central** - Diferenciação
+9. **Módulos** - Os 5 módulos guiados pelas faces da Deusa
+10. **Investimento** - Preço + garantia
+11. **FAQ** - Perguntas frequentes (inclui a desmistificação "não é tantra sexual")
+12. **CTA Final** - Conversão
 
 ## 🔍 SEO
 
