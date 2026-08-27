@@ -87,6 +87,40 @@ src="https://www.facebook.com/tr?id=1217417730189284&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- ===== BLOCO 2 — DEPOIMENTOS EM VÍDEO ===== -->
+<section class="testimonials">
+  <div class="container">
+    <div style="text-align: center;">
+      <span class="eyebrow centered">Quem já trilhou o caminho</span>
+    </div>
+    <h2><em>Transformação real,</em><br>não mais conteúdo acumulado.</h2>
+    <p class="lede">Buscadores que deixaram de apenas consumir informação espiritual e começaram a reorganizar a própria vida.</p>
+
+    <div class="video-grid">
+      <div class="video-card" data-src="videos/dep-1.mp4">
+        <img class="video-thumb-photo" src="videos/dep-1-poster.jpg" alt="Depoimento em vídeo" loading="lazy">
+        <div class="play"></div>
+      </div>
+      <div class="video-card" data-src="videos/dep-2.mp4">
+        <img class="video-thumb-photo" src="videos/dep-2-poster.jpg" alt="Depoimento em vídeo" loading="lazy">
+        <div class="play"></div>
+      </div>
+      <div class="video-card" data-src="videos/dep-3.mp4">
+        <img class="video-thumb-photo" src="videos/dep-3-poster.jpg" alt="Depoimento em vídeo" loading="lazy">
+        <div class="play"></div>
+      </div>
+      <div class="video-card" data-src="videos/dep-4.mp4">
+        <img class="video-thumb-photo" src="videos/dep-4-poster.jpg" alt="Depoimento em vídeo" loading="lazy">
+        <div class="play"></div>
+      </div>
+    </div>
+
+    <div class="btn-center">
+      <a href="https://pay.herospark.com/caminho-da-autonomia-539704" target="_blank" rel="noopener" class="btn-primary js-checkout" onclick="fbq('track', 'InitiateCheckout');">Quero viver essa transformação</a>
+    </div>
+  </div>
+</section>
+
 <!-- ===== BLOCO 3 — PARA QUEM É E NÃO É ===== -->
 <section class="for-whom">
   <div class="container">
@@ -459,6 +493,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     if (target === '#' || target.length < 2) return;
     const el = document.querySelector(target);
     if (el) { e.preventDefault(); window.scrollTo({ top: el.offsetTop - 60, behavior: 'smooth' }); }
+  });
+});
+
+// === DEPOIMENTOS EM VIDEO - CLICK-TO-PLAY, ZERO BYTE DE VIDEO ATE O CLIQUE ===
+// O poster ja e uma foto real (extraida uma vez, na hora de preparar os arquivos), nao um
+// <video preload> disfarcado - nenhuma requisicao de video acontece ate a pessoa clicar.
+document.querySelectorAll('.video-card').forEach(function (card) {
+  card.addEventListener('click', function () {
+    if (card.classList.contains('is-playing')) return;
+    const src = (card.dataset.src || '').trim();
+    if (!src) return;
+
+    const player = document.createElement('video');
+    player.src = src;
+    player.controls = true;
+    player.autoplay = true;
+    player.playsInline = true;
+
+    card.classList.add('is-playing');
+    card.appendChild(player);
+    player.play().catch(function () {});
   });
 });
 </script>
