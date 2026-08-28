@@ -144,13 +144,25 @@ section { padding: 6rem 1.5rem; position: relative; }
   display: grid; grid-template-columns: 1fr 380px; gap: 4rem;
   align-items: center; position: relative; z-index: 2; width: 100%;
 }
-.hero-content .eyebrow { color: var(--gold-soft); margin-bottom: 2rem; }
-.hero-content .eyebrow::before, .hero-content .eyebrow::after { background: var(--gold-deep); }
-/* o kicker do hero é longo e quebra em duas linhas: sem o traço final, e com o
-   traço inicial alinhado à primeira linha, a quebra fica intencional */
-.hero-content .eyebrow { align-items: flex-start; }
-.hero-content .eyebrow::before { margin-top: 0.58rem; }
-.hero-content .eyebrow::after { display: none; }
+
+/* Introdução centralizada acima do vídeo — eyebrow + headline + subhead */
+.hero-intro {
+  max-width: 780px; margin: 0 auto 3rem; text-align: center;
+  position: relative; z-index: 2;
+}
+.hero-intro .eyebrow { color: var(--gold-soft); }
+.hero-intro .eyebrow::before, .hero-intro .eyebrow::after { background: var(--gold-deep); }
+.hero-intro .hero-subhead { margin-left: auto; margin-right: auto; }
+
+/* Vídeo da aula ao vivo, em destaque no topo do hero */
+.hero-video {
+  position: relative; width: 100%; max-width: 900px; margin: 0 auto 4rem;
+  aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden;
+  border: 1px solid var(--gold); box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+  background: var(--maroon); z-index: 2;
+}
+.hero-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
 .hero h1 {
   font-size: clamp(2.6rem, 5.2vw, 4.4rem); color: var(--cream);
   margin-bottom: 1.8rem; font-weight: 500; letter-spacing: -0.015em;
@@ -208,6 +220,8 @@ section { padding: 6rem 1.5rem; position: relative; }
   .hero { padding: 6rem 1.2rem 4rem; min-height: auto; }
   .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
   .offer-card { max-width: 420px; margin: 0 auto; }
+  .hero-intro { margin-bottom: 2.2rem; }
+  .hero-video { margin-bottom: 3rem; }
 }
 
 /* === TESTIMONIALS === */
